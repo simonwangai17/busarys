@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>loader</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="preloader">
+            <div class="counter">0</div>
+        </div>
+        <section>
+            <div class="container">
+                <nav>
+                    <h1><img src="..//image/cdf.png" alt=""></h1>
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Login</a></li>
+                    </ul>
+                </nav>
+                <div class="article">
+                    <h1>NJOORO NG-CDF BUSARY</h1>
+                    <p>National Goverment Constituciences Development Fund <br>
+                    Njooro Constituency <br>
+                p.o box 531-20302 <br>
+            Njooro</p>
+                    <a href="form.html" class="btn">Apply Now</a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function counter(){
+                var count = setInterval(function(){
+                    var c = parseInt($('.counter').text());
+                    $('.counter').text((++c).toString());
+                    if (c==100){
+                        clearInterval(count);
+                        $('.counter').addClass('hide')
+                        $('.preloader').addClass('active')
+                    }
+                },60)
+            }
+            counter()
+        </script>
+    </body>
+</html>
